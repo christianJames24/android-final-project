@@ -28,3 +28,29 @@ data class PokemonEntity(
     val baseSDefence: Int,
     val baseSpeed: Int
 )
+
+fun Pokemon.toEntity(): PokemonEntity {
+    return PokemonEntity(
+        id = this.id,
+        name = this.name,
+        pokemonClassification = this.pokemonClassification,
+        pokemonDescription = this.pokemonDescription,
+        eggGroup = this.eggGroup,
+        type = this.type,
+        abilities = this.abilities,
+        hiddenAbility = this.hiddenAbility,
+        levelUpAttacks = this.levelUpAttacks,
+        tmAttacks = this.tmAttacks,
+        eggMoves = this.eggMoves,
+        malePercentage = this.malePercentage,
+        femalePercentage = this.femalePercentage,
+        height = this.height,
+        weight = this.weight,
+        baseHP = this.baseHP,
+        baseAttack = this.baseAttack,
+        baseDefence = this.baseDefence,
+        baseSAttack = this.baseSAttack,
+        baseSDefence = this.baseSDefence,
+        baseSpeed = this.baseSpeed
+    )
+}

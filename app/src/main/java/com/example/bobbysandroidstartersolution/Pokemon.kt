@@ -15,6 +15,7 @@ data class Pokemon(
     val levelUpAttacks : List<String>,
     val tmAttacks : List<String>,
     val eggMoves : List<String>,
+    val moveTutorAttacks : List<String>,
 
     val malePercentage : Float,
     val femalePercentage : Float,
@@ -28,6 +29,33 @@ data class Pokemon(
     val baseSAttack : Int,
     val baseSDefence : Int,
     val baseSpeed : Int,
-)
+) {
+    fun toEntity(pokemon: Pokemon): PokemonEntity {
+        return PokemonEntity(
+            id = pokemon.id,
+            name = pokemon.name,
+            pokemonClassification = pokemon.pokemonClassification,
+            pokemonDescription = pokemon.pokemonDescription,
+            eggGroup = pokemon.eggGroup,
+            type = pokemon.type,
+            abilities = pokemon.abilities,
+            hiddenAbility = pokemon.hiddenAbility,
+            levelUpAttacks = pokemon.levelUpAttacks,
+            tmAttacks = pokemon.tmAttacks,
+            eggMoves = pokemon.eggMoves,
+            malePercentage = pokemon.malePercentage,
+            femalePercentage = pokemon.femalePercentage,
+            height = pokemon.height,
+            weight = pokemon.weight,
+            baseHP = pokemon.baseHP,
+            baseAttack = pokemon.baseAttack,
+            baseDefence = pokemon.baseDefence,
+            baseSAttack = pokemon.baseSAttack,
+            baseSDefence = pokemon.baseSDefence,
+            baseSpeed = pokemon.baseSpeed
+        )
+    }
+
+}
 
 
