@@ -1,0 +1,67 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/michroma_font_family</item>
+
+        <item name="android:textViewStyle">@style/FuturisticText</item>
+        <item name="android:buttonStyle">@style/FuturisticButton</item>
+        <item name="buttonStyle">@style/FuturisticButton</item>
+        <item name="materialButtonStyle">@style/FuturisticButton</item>
+        <item name="android:background">@color/colorBackground</item>
+
+        <item name="android:popupBackground">@color/colorBackground</item>
+
+        <item name="android:listViewStyle">@style/CustomListView</item>
+        <item name="android:listViewWhiteStyle">@style/CustomListView</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="cardViewStyle">@style/CustomCardView</item>
+
+        <item name="android:dialogTheme">@style/CustomAlertDialog</item>
+
+    </style>
+
+    <style name="FuturisticText" parent="android:TextAppearance.Material.Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/michroma_font_family</item>
+        <item name="android:background">@drawable/text_view_background_with_separator</item> <!-- Added line separator -->
+    </style>
+
+
+    <style name="FuturisticButton" parent="android:Widget.Material.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/cardview_dark_background</item>
+        <item name="android:fontFamily">@font/michroma_font_family</item>
+    </style>
+
+    <style name="Headline" parent="FuturisticText">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="CustomListView" parent="android:Widget.ListView">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:divider">@color/separatorColor</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>      <!--WHY DOES THIS NOT WORK -->
+    </style>
+
+
+    <style name="CustomCardView" parent="CardView">
+        <item name="cardBackgroundColor">@color/cardBackground</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:textColor">@color/design_default_color_secondary</item>      <!--WHY DOES THIS NOT WORK -->
+    </style>
+
+</resources>
