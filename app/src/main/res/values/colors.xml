@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#C0C0C0</color> <!-- Silver -->
+    <color name="colorPrimaryDark">#404040</color> <!-- Onyx Gray -->
+    <color name="colorAccent">#A2ADD0</color> <!-- Subtle Blue -->
+    <color name="colorBackground">#202020</color> <!-- Charcoal -->
+    <color name="separatorColor">#E0E0E0</color> <!-- Light Gray -->
+    <color name="cardBackground">#2A2A2A</color> <!-- Dark Gray -->
 </resources>

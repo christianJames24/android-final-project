@@ -1,27 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PokemonDetailFragment"
+    android:theme="@style/AppTheme">
 
-    <!-- Wrap all content in a single container, e.g., LinearLayout -->
-    <LinearLayout
+    <!-- Header section -->
+    <TextView
+        android:id="@+id/pokemon_detail_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:textSize="50sp"
+        android:layout_marginTop="8dp"
+        android:text="Pokemon Detail" />
 
-        <!-- Place all your views here -->
-        <TextView
-            android:id="@+id/pokemonNameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp" />
-        <TextView
-            android:id="@+id/pokemonNameIDView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp" />
+    <!-- Main content container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <!-- Add more views as needed, all within this LinearLayout -->
+        <!-- Red section (left side) -->
+        <!-- Scrollable Red section (left side) -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0043A047"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/returnMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Back" />
+
+                <TextView
+                    android:id="@+id/pokemonNameIDView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pokemonNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pokemonClassificationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pokemonDescriptionView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/eggGroupView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/hiddenAbility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!-- Scrollable Green section (right side) -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0043A047"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <!-- Blue section (header) inside green section -->
+                <ImageView
+                    android:id="@+id/pokemonImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:contentDescription="@drawable/missing"
+                    android:scaleType="fitCenter" />
+                <ListView
+                    android:id="@+id/typeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/malePercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Male Percentage: "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/femalePercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Female Percentage: "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Height: "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Weight: "
+                    android:textSize="16sp" />
+
+                <!-- Additional Views that are part of the green section can be added here -->
+                <!-- For example, all your TextViews and Buttons can be added here -->
+                <!-- Make sure to close the ScrollView and the parent LinearLayout -->
+
+                <Button
+                    android:id="@+id/levelUpAttacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Level-up Moves"
+                    android:layout_marginTop="20dp"/>
+
+                <Button
+                    android:id="@+id/tmAttacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Technical Machine Moves"
+                    android:layout_marginTop="20dp"/>
+
+                <Button
+                    android:id="@+id/eggAttacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Egg Moves"
+                    android:layout_marginTop="20dp"/>
+
+                <Button
+                    android:id="@+id/moveTutorAttacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Move Tutor Moves"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/baseHP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Base Health: "
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/baseAttack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Base Attack: "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/baseDefence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Base Defence: "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/baseSAttack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Base Special Attack: "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/baseSDefence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Base Special Defence: "
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/baseSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Base Speed: "
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/weaknessesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weaknesses" />
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-</ScrollView>
+
+    <!-- Footer section, if any, can be added here -->
+</LinearLayout>
+
+

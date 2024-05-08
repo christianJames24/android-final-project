@@ -24,5 +24,6 @@ data class Pokemon(
     val baseDefence: Int,
     val baseSAttack: Int,
     val baseSDefence: Int,
-    val baseSpeed: Int
+    val baseSpeed: Int,
+    val imageUrl: String,
 ) : Serializable

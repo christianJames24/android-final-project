@@ -1,10 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme">
+
+    <TextView
+        android:id="@+id/pokemon_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:layout_marginTop="8dp"
+        android:text="Epic Pokedex"/>
+
+    <!-- Search bar -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Pokémon"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <ListView
         android:id="@+id/pokemonListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</FrameLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
