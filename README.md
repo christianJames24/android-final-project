@@ -36,3 +36,30 @@ A simple Android app to browse and view Pokémon information. Built with Kotlin 
 - No external libraries (just AndroidX)
 
 ## Project Structure
+app/src/main/java/
+├── MainActivity.kt
+├── PokemonListFragment.kt
+├── PokemonDetailFragment.kt
+├── Pokemon.kt
+└── PokemonData.kt
+
+## How to Use
+
+1. Launch app → see Pokémon list
+2. Use search bar to filter by name/ID
+3. Tap any Pokémon to see details
+4. Press back or "Return to Menu" button to go back
+
+## Adding More Pokémon
+
+Edit `PokemonData.kt` and add new entries to the `samplePokemons` list. Just copy the format of existing entries.
+
+## Notes
+
+- Images should be in `res/drawable/` folder
+- Currently has 10 Pokémon (N + Gen 5 starters)
+- Type effectiveness calculations included
+
+---
+
+Built as a learning project. Feel free to use/modify.
