@@ -35,14 +35,6 @@ A simple Android app to browse and view Pokémon information. Built with Kotlin 
 - Fragments for navigation
 - No external libraries (just AndroidX)
 
-## Project Structure
-app/src/main/java/
-├── MainActivity.kt
-├── PokemonListFragment.kt
-├── PokemonDetailFragment.kt
-├── Pokemon.kt
-└── PokemonData.kt
-
 ## How to Use
 
 1. Launch app → see Pokémon list
